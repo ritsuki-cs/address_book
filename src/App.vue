@@ -37,6 +37,7 @@ export default {
         if (this.$router.currentRoute.name == 'home') {
           this.$router.push({ name: 'addresses' }, () => {})
         }
+        this.fetchAddresses()
       } else {
         this.deleteLoginUser()
         this.$router.push({ name: 'home' }, () => {})
@@ -54,6 +55,7 @@ export default {
       'setLoginUser',
       'logout',
       'deleteLoginUser',
+      'fetchAddresses',
     ]),
   },
 }
